@@ -27,7 +27,7 @@ class GameManager {
       this.badObjectsEaten = badObjectsEaten
     }
   
-    update() {
-      this.scenes[this.currentScene].draw()
+    update(p5) {
+      this.scenes[this.currentScene].draw(p5)
     }
   }

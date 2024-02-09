@@ -4,6 +4,7 @@ class GameScene extends Scene {
     }
   
     draw() {
+      console.log("Test")
       background(255, 0, 0);
     }
-  }
+}

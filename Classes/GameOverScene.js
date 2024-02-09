@@ -6,4 +6,4 @@ class GameOverScene extends Scene {
     draw() {
       background(0, 255, 0);
     }
-  }
+}
