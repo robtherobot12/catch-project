@@ -1,10 +1,11 @@
 class Player {    
-    constructor(p5) {
+    constructor(p5, objectManager) {
         this.p5 = p5
         this.xInput = 0
         this.speed = 0.2
         this.x
         this.y
+        this.objectManager = objectManager
     }
 
     display() {
@@ -41,5 +42,7 @@ class Player {
         this.x = this.p5.lerp(this.x, this.x + (this.xInput * this.p5.deltaTime * this.speed), 0.9)
         // console.log(this.x)
         this.x = Utils.clamp(this.x, 0, this.p5.width)
+
+        this.objectManager.updatePlayer(this.x, this.y, 70, 60)
     }
 }

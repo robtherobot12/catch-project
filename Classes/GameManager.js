@@ -10,24 +10,41 @@ class GameManager {
     addScene(scene) {
       this.scenes.push(scene)
     }
-  
-    setPoints(points) {
-      this.points = points
+
+    setScene(sceneIndex) {
+      this.currentScene = sceneIndex
+    }
+
+    addPoints(points) {
+      this.points += points
     }
   
     getPoints() {
       return this.points
     }
   
-    setObjectsMissed(objectsMissed) {
-      this.objectsMissed = objectsMissed
+    addObjectsMissed(objectsMissed) {
+      this.objectsMissed += objectsMissed
+    }
+
+    getObjectsMissed() {
+      return this.objectsMissed
     }
   
     setBadObjectsEaten(badObjectsEaten) {
       this.badObjectsEaten = badObjectsEaten
     }
+
+    resetState() {
+      this.objectsMissed = 0
+      this.points = 0
+      this.badObjectsEaten = 0
+    }
   
     update(p5) {
       this.scenes[this.currentScene].draw(p5)
+      if(this.objectsMissed >= 5) {
+        this.currentScene = 1
+      }
     }
   }
