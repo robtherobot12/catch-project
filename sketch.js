@@ -40,6 +40,9 @@ class GameScene extends Scene {
   constructor(NEXT_SCENE) {
     super(NEXT_SCENE)
 
+    this.FallingObjectManager = new FallingObjectManager(5, myp5)
+    this.player = new Player(myp5);
+
     this.grapePlants = []
     for (let n=0; n < 7; n++) {
       let grapeVine = new GrapeVine(myp5)
@@ -89,6 +92,8 @@ class GameScene extends Scene {
       this.grapePlants[n].draw(p5, 300 + (60*n), 195 - (7*n))
     }
     
+    this.FallingObjectManager.update()
+    this.player.display()
   }
 
   

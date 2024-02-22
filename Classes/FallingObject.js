@@ -1,5 +1,5 @@
 class FallingObject {
-    constructor(x, y, speed, pointsModifier) {
+    constructor(p5, x, y, speed, pointsModifier) {
       this.x = x
       this.y = y
       this.speed = speed
@@ -15,6 +15,6 @@ class FallingObject {
     }
   
     draw() {
-      
+      p5.circle(this.x, this.y, 20)
     }
   }
