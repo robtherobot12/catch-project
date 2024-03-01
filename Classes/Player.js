@@ -8,6 +8,9 @@ class Player {
         this.objectManager = objectManager
     }
 
+    /**
+ * Displays the player character and handles its movement.
+ */
     display() {
         this.x == null ? this.x = this.p5.width / 2 : this.x = this.x
         this.y == null ? this.y = this.p5.height - 50 : this.y = this.y

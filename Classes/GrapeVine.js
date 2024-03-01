@@ -13,6 +13,13 @@ class GrapeVine {
         }
     }
 
+    /**
+ * Draws a vine object at the specified position.
+ * 
+ * @param {p5} p5 - The p5.js instance.
+ * @param {number} x - The x-coordinate of the top-left corner of the vine object.
+ * @param {number} y - The y-coordinate of the top-left corner of the vine object.
+ */
     draw(p5, x, y) {
         p5.fill("#362419")
         p5.ellipse(x, y + 90, 50, 20)

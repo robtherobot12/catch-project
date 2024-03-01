@@ -3,6 +3,13 @@ class Grass {
         this.rand = rand
     }
 
+    /**
+ * Draws a simple line representing a grass strand at the specified position.
+ * 
+ * @param {p5} p5 - The p5.js instance.
+ * @param {number} x - The x-coordinate of the starting point of the grass.
+ * @param {number} y - The y-coordinate of the starting point of the grass.
+ */
     draw(p5, x, y) {
         p5.stroke("#306844")
         p5.angleMode("RADIANS")
